@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tabhost"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+		/>
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+		>
+			<!-- 支出タブのレイアウト -->
+			<LinearLayout android:id="@+id/expenditure_tab"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical">
+			    <Button android:id="@+id/expenditure_sendbutton"
+			    	android:width="80pt"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:layout_gravity="center"
+			    	android:layout_marginTop="5pt"
+			    	android:textSize="9pt"
+			    	android:text="@string/send" />
+				<TextView android:text="@string/date"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <Button android:id="@+id/expenditure_datebutton"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView
+  					android:text="@string/price"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left" />
+			    <EditText android:id="@+id/expenditure_amount"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px"
+			    	android:inputType="number" />
+			    <TextView
+  					android:text="@string/category"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <Spinner android:id="@+id/expenditure_categoryspinner"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+ 			    	android:textSize="9pt"
+ 			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView
+  					android:text="@string/payment"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <Spinner android:id="@+id/expenditure_paymentmethodspinner"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+				<CheckBox
+			        android:id="@+id/is_staff_canteen_checkbox"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text="社員食堂"/>
+			        <!-- android:visibility="gone" -->
+  				<TextView
+  					android:text="@string/notice"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <EditText android:id="@+id/expenditure_memo"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px"
+			    	android:inputType="textMultiLine" />
+			</LinearLayout>
+
+			<!-- 収入タブのレイアウト -->
+			<LinearLayout android:id="@+id/income_tab"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical">
+			    <Button android:id="@+id/income_sendbutton"
+			    	android:width="80pt"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:layout_gravity="center"
+			    	android:layout_marginTop="5pt"
+			    	android:textSize="9pt"
+			    	android:text="@string/send" />
+				<TextView android:text="@string/date"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left" />
+			    <Button android:id="@+id/income_datebutton"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView android:text="@string/price"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <EditText android:id="@+id/income_amount"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px"
+			    	android:inputType="number" />
+  				<TextView
+  					android:text="@string/money_recieved"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <Spinner android:id="@+id/income_receivespinner"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView
+  					android:text="@string/notice"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <EditText android:id="@+id/income_memo"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px"
+			    	android:inputType="textMultiLine" />
+			</LinearLayout>
+
+			<!-- 移動タブのレイアウト -->
+			<LinearLayout android:id="@+id/move_tab"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical">
+			    <Button android:id="@+id/move_sendbutton"
+			    	android:width="80pt"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:layout_gravity="center"
+			    	android:layout_marginTop="5pt"
+			    	android:textSize="9pt"
+			    	android:text="@string/send" />
+				<TextView android:text="@string/date"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:gravity="left" />
+   			    <Button android:id="@+id/move_datebutton"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView android:text="@string/price"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <EditText android:id="@+id/move_amount"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px"
+			    	android:inputType="number" />
+  				<TextView
+  					android:text="@string/move_source"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <Spinner android:id="@+id/move_movefromspinner"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView
+  					android:text="@string/move_target"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <Spinner android:id="@+id/move_movetospinner"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="9pt"
+			    	android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px" />
+  				<TextView
+  					android:text="@string/notice"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="left"/>
+			    <EditText android:id="@+id/move_memo"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20px"
+			    	android:layout_marginRight="20px"
+			    	android:inputType="textMultiLine" />
+			</LinearLayout>
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>

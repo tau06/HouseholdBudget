@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="jp.ne.nissing.util.householdbudget"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:enabled="true" android:debuggable="true" android:restoreNeedsApplication="true">
+        <activity android:name=".HouseholdBudget" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".forms.InitializationForm" android:label="@string/initializationsettingtitle" />
+        <activity android:name=".forms.PaymentSettingForm" android:label="@string/paymentsettingtitle" />
+        <activity android:name=".forms.CategoryRelationForm" android:label="@string/change_relation_category_paymethod" />
+        <activity android:name=".forms.AccountSettingForm" android:label="@string/accountsettingtitle" />
+        <activity android:name=".forms.CategorySettingForm" android:label="@string/categorysettingtitle" />
+        <activity android:name=".forms.CashStorageSettingForm" android:label="@string/cashstoragesetting" />
+        <activity android:name=".forms.MenuForm"></activity>
+        
+        <receiver  
+            android:name=".HouseholdBudgetWidgetProvider"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget" />
+        </receiver>
+        
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

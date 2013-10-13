@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">G.S.家計簿</string>
+    <string name="initializationsettingtitle">初期設定</string>
+	
+   	<string name="menutitle">メニュー</string>
+	<string name="categorysettingtitle">カテゴリの設定</string>
+    <string name="paymentsettingtitle">支払方法の設定</string>
+	<string name="cashstoragesetting">支払元の設定</string>
+    <string name="accountsettingtitle">アカウント設定</string>
+	<string name="sort_item">並び替え</string>
+    
+	<string name="send">送信</string>
+	<string name="date">日付</string>
+	<string name="price">金額</string>
+	<string name="category">カテゴリー</string>
+	<string name="payment">支払方法</string>
+	<string name="notice">備考</string>
+
+	<string name="money_recieved">入金先</string>
+	<string name="move_source">移動元</string>
+	<string name="move_target">移動先</string>
+
+	<string name="login_now">ログイン中...</string>
+	<string name="login_success">ログインに成功しました</string>
+	<string name="login_failed">ログインに失敗しました</string>
+
+	<string name="tab_id_income">income</string>
+	<string name="tab_id_expenditure">expenditure</string>
+	<string name="tab_id_move">move</string>
+
+	<string name="expenditure">支出</string>
+	<string name="income">収入</string>
+	<string name="move">移動</string>
+	<string name="setting">設定</string>
+
+	<string name="no_setting_account">アカウントが設定されていません</string>
+	<string name="existing_sheet">既存のシートを使用しますか？</string>
+
+	<string name="no_input_price">金額が設定されていません</string>
+	<string name="waiting_message">しばらくお待ちください...</string>
+	
+	<string name="sending">データを送信中です...</string>
+	<string name="send_successed">送信が完了しました</string>
+	<string name="send_failed">送信に失敗しました</string>
+
+	<string name="saving">データをローカルに保存中です...</string>
+	<string name="saved_local">ローカルに保存しました。次回ログイン時に自動送信します。</string>
+	<string name="send_local">ローカルのデータを送信しました</string>
+	<string name="save_faild">保存に失敗しました</string>
+
+   	<string name="change_relation_category_paymethod">支払い方法との関連変更</string>
+   	<string name="change_relation_paymethod_storage">支払金保管場所との関連変更</string>
+
+   	<string name="delete">削除</string>
+	<string name="ok">OK</string>
+	<string name="cancel">キャンセル</string>
+	<string name="yes">はい</string>
+	<string name="no">いいえ</string>
+
+	<string name="lunch">社食</string>
+	<string name="fare">運賃</string>
+</resources>

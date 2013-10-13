@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">  
+  <TextView
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:text="名称"
+  	android:textSize="9pt" />
+  <EditText
+ 	android:id="@+id/paymentsetting_nametext"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:layout_marginLeft="20pt"
+  	android:layout_marginRight="20pt" />
+  <TextView
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:text="支払元"
+  	android:textSize="9pt" />
+  <Spinner
+  	android:id="@+id/paymentsetting_cashstrage"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+ 	android:layout_marginLeft="20pt"
+  	android:layout_marginRight="20pt" />
+  <Button android:id="@+id/paymentsetting_sendbutton"
+   	android:width="80pt"
+   	android:layout_width="wrap_content"
+   	android:layout_height="wrap_content"
+   	android:layout_gravity="center"
+   	android:layout_marginTop="5pt"
+   	android:textSize="9pt"
+   	android:text="決定" />
+</LinearLayout>
