@@ -81,8 +81,7 @@ public class DBConnection extends SQLiteOpenHelper {
         // カテゴリのプリセットを設定
         db.beginTransaction();
         try {
-            String[] categorys = new String[] { "食費", "交通費", "交際費", "被服費", "医療費", "通信費", "税金",
-                    "住居費", "電気代", "水道代", "ガス代" };
+            String[] categorys = new String[] { "食費", "交通費", "医療費" };
             SQLiteStatement stmt = db
                     .compileStatement("INSERT INTO category VALUES(?, ?, '0', 'true');");
             for (int i = 0; i < categorys.length; i++) {
