@@ -75,8 +75,8 @@
 			        android:id="@+id/is_staff_canteen_checkbox"
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
-			        android:text="社員食堂"/>
-			        <!-- android:visibility="gone" -->
+			        android:text="社員食堂"
+			        android:visibility="gone" />
   				<TextView
   					android:text="@string/notice"
 			        android:layout_width="fill_parent"
