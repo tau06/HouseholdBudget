@@ -100,6 +100,8 @@ public class HouseholdBudget extends Activity implements OnClickListener {
         // ここで，データベース内にアカウントが登録されていなかったら，初期設定画面を開く
         if (!isAccountEnabled()) {
             showInitializeForm();
+            finish();
+            return;
         }
 
         // タブ設定
