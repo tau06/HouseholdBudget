@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import jp.ne.nissing.util.householdbudget.DBManager;
+import jp.ne.nissing.util.householdbudget.HouseholdBudget;
 import jp.ne.nissing.util.householdbudget.R;
 import jp.ne.nissing.util.householdbudget.data.HouseholdData;
 import jp.ne.nissing.util.householdbudget.service.GoogleGateWay;
@@ -40,6 +42,8 @@ public class InitializationForm extends Activity implements OnClickListener {
      * 現在のフォームを閉じる
      */
     public void finishInitialization() {
+        Intent intent = new Intent(InitializationForm.this,HouseholdBudget.class);
+        startActivity(intent);
         finish();
     }
 
@@ -63,6 +67,16 @@ public class InitializationForm extends Activity implements OnClickListener {
                 || spreadSheet.getText().toString().equals("")) {
             ShowToastMessage("入力されていない欄が存在します");
             return;
+        }
+        
+        if(GoogleGateWay.getInstace().checkEnableLogin(account.getText().toString(), pass.getText().toString()) == false){
+            getProgressDialog().dismiss();
+            ShowToastMessage("初期化に失敗しました.\nメールアドレスかパスワードが間違っています.");
+            return;
+        }
+        else{
+            HouseholdData.getInstance().setProfile(account.getText().toString(),
+                    pass.getText().toString(), spreadSheet.getText().toString());
         }
 
         // !< 指定したスプレッドシートが存在しなければ、新規作成。存在すれば関連付けのみ
@@ -124,6 +138,7 @@ public class InitializationForm extends Activity implements OnClickListener {
                         public void onClick(DialogInterface dialog, int which) {
                         }
                     });
+            bDialog.show();
         }
     }
 

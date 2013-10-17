@@ -1,5 +1,7 @@
 package jp.ne.nissing.util.householdbudget.service;
 
+import android.accounts.AccountManager;
+
 import com.pras.SpreadSheet;
 import com.pras.SpreadSheetFactory;
 import com.pras.WorkSheet;
@@ -189,6 +191,21 @@ public class GoogleGateWay {
 
     }
 
+    /**
+     * 引数で指定したUserとPassでログインできるかを返す
+     * @param user
+     * @param pass
+     * @return
+     */
+    public boolean checkEnableLogin(String user,String pass){
+        
+        SpreadSheetFactory factrory = SpreadSheetFactory.getInstance(user, pass);
+        ArrayList<SpreadSheet> sheets = factrory.getAllSpreadSheets();
+        if(factrory == null || sheets == null)
+            return false;
+        return true;
+    }
+    
     /**
      * SpreadSheetを作成する
      * 
